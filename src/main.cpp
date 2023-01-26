@@ -4,7 +4,6 @@
 #elif defined(ESP8266)
 #include <ESP8266WiFi.h>
 #endif
-#include <WiFi.h>
 #include <PubSubClient.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
@@ -94,7 +93,7 @@ void reconnect()
     if (client.connect(clientId.c_str()))
     {
       Serial.println("connected");
-      // Subscribe to topic 
+      // Subscribe to topic
       // client.subscribe(subscribeTopic);
     }
     else
